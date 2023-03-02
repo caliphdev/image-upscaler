@@ -1,0 +1,11 @@
+{
+    "port": 3003,
+    "site": {
+        "url": "https://imageup.caliph.me",
+        "title": "Image Upscaler",
+        "title2": "Free Online Image Upscaler - Upscale Your Images with AI",
+        "description": "Upscale your images with our free online image upscaler tool. No software download or registration required. Get high-resolution and clear images with just a few clicks using the power of AI. Try it now!",
+        "keywords": "image upscaler, online image upscaling, AI image upscaling"
+    },
+    "authtoken": "clph123"
+}

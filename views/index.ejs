@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= locals.site.title2 %></title>
+    <link rel="canonical" href="<%= locals.site.url %>" />
+    <meta content="<%= locals.site.description %>" name="description" />
+    <meta name="keywords" content="<%= locals.site.keywords %>" />
+    <link rel="stylesheet" href="/css/style.css"> 
+     <link rel="stylesheet" href="/css/alert.css">
+    <style>
+.preview-container {
+  text-align: center;
+}
+
+.preview-image {
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+}
+</style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-10 sm:px-6 lg:px-8">
+        <div class="infoku"></div>
+        <% if(locals.error) { %>
+            <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4" role="alert">
+                <p><%= locals.error %></p>
+            </div>
+        <% } %>
+        <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-lg">
+            <div class="md:flex">
+                <div class="w-full p-4">
+                    <h1 class="text-2xl font-bold text-gray-800 mb-4 sm:text-3xl"><%= locals.site.title %></h1>
+                   <!-- Description -->
+                    <p class="text-gray-700 text-sm mb-4"><%= locals.site.description %></p>
+                    <hr>
+                    </br>
+                    <form id="upload-form" enctype="multipart/form-data">
+                        <div class="mb-4">
+                            <label for="image" class="block text-gray-700 font-bold mb-2">Upload Image</label>
+                            <!-- Form Image File Upload -->
+                            <input type="file" accept="image/jpeg,image/png" name="image" id="image" class="bg-gray-100 border-2 w-full p-4 rounded-lg" onchange="showPreview(this)" required>
+                        </div>
+                        <div class="mb-4">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Remove Background</button>
+                        </div>
+                        <div class="mb-4 preview-container">
+                    <img src="" alt="Preview Image" style="display: none;" class="preview-image" id="preview">
+                        </div>
+                    </form>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center text-gray-500 text-sm mt-10">
+    Created by <a href="https://caliphdev.codes" class="underline text-gray-500 hover:text-blue-500 transition-colors duration-300" target="_blank">Caliph Dev</a>. | <a href="https://github.com/caliphdev/remove-bg" class="underline text-gray-500 hover:text-blue-500 transition-colors duration-300" target="_blank">GitHub</a>. | <a href="/stats" class="underline text-gray-500 hover:text-blue-500 transition-colors duration-300">System Status</a>.
+</footer>
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/api/appweb/visit"></script>
+    <script src="/js/process.js"></script>
+    <script>
+    function showPreview(input) {
+  var preview = document.getElementById('preview');
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      preview.setAttribute('src', e.target.result);
+      preview.style.display = 'block'; 
+    }
+    
+    reader.readAsDataURL(input.files[0]);
+  } else {
+    preview.setAttribute('src', '');
+    preview.style.display = 'none'; 
+  }
+}
+
+    </script>
+</body>
+</html>

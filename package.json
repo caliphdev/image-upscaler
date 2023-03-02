@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "axios": "^1.3.4",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "jimp": "^0.22.7",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.0",
+    "socket.io": "^4.6.1"
+  },
+  "name": "remove-bg",
+  "version": "1.0.0",
+  "description": "simple site to remove background",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caliphdev/remove-bg.git"
+  },
+  "author": "caliphdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caliphdev/remove-bg/issues"
+  },
+  "homepage": "https://github.com/caliphdev/remove-bg#readme"
+}
