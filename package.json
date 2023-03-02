@@ -25,7 +25,7 @@
 "type": "git",
 "url": "git+https://github.com/caliphdev/image-upscaler.git"
 },
-"author": "Your Name",
+"author": "caliphdev",
 "license": "ISC",
 "bugs": {
 "url": "https://github.com/caliphdev/image-upscaler/issues"
