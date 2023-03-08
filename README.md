@@ -22,7 +22,7 @@ git clone https://github.com/caliphdev/image-upscaler
 ```
 2. Navigate to the project directory:
 ```bash
-cd remove-bg
+cd image-upscaler
 ```
 3. Install the dependencies:
 ```bash
